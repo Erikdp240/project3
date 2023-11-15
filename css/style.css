@@ -1,0 +1,275 @@
+.container1, .container2, .container3 {
+  width: 40rem;
+  margin: auto;
+  padding-top: 0px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container1 section, .container2 section {
+  width: 40rem;
+  height: 100%;
+  margin: auto;
+  padding-top: 10px;
+  background-color: white;
+}
+
+.container1 ul {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.container1 ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.erik, .cream {
+  line-height: 0;
+}
+
+.erik img, .cream img {
+  width: 100%;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+body {
+  background-image: url("../images/cream-background.avif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+}
+
+#education h2, #experience h2 {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#education h4, #experience h4 {
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#education p, #experience p {
+  margin-top: 0;
+  margin-bottom: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#student {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#first {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+#info {
+  margin-top: 20px;
+  position: relative;
+  padding-left: 10px;
+}
+
+#person input {
+  font-size: 17px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-left: 60px;
+}
+
+#textbox {
+  padding-left: 10px;
+}
+
+#textbox textarea {
+  border-radius: 1rem;
+  text-align: center;
+}
+
+#sub {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+#sub p {
+  text-align: center;
+}
+
+#sub input[type=submit] {
+  background-color: lightgray;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 150px;
+  margin-left: 245px;
+  margin-bottom: 10px;
+}
+
+#sub input[type=submit]:hover{
+  letter-spacing: 1px;
+  background-color: blue;
+}
+
+#youtube {
+  background-color: white;
+  border-radius: 1rem 1rem 0 0;
+}
+
+#youtube h4 , #youtube a {
+  float: left;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+#youtube p {
+  float: right;
+  padding-left: 10px;
+  margin: 5px 5px 10px 5px;
+  border-color: black;
+  border-radius: 1px;
+}
+
+#youtube iframe {
+  border: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 300px;
+  width: 500px;
+}
+
+#video {
+  text-align: center;
+}
+
+#activities {
+  background-color: black;
+  border-radius: 0 0 1rem 1rem;
+}
+
+#activities h3 {
+  margin-top: 0;
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+#youtube h3 {
+    margin-top: 0;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#activities ul li {
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#actions {
+  text-align: center;
+}
+
+#main-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  float: left;
+}
+
+#main-navbar ul li {
+  float: left;
+  position: relative;
+  right: 50%;
+  display: block;
+}
+
+#main-navbar ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+#main-navbar {
+  background-color: white;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .fun-facts-page body {
+    justify-content: flex-end;
+  }
+
+  .fun-facts-page #main-navbar {
+    background-color: black;
+  }
+
+  .fun-facts-page #main-navbar ul li a {
+    color: white;
+  }
+
+  #activities {
+    background-color: white;
+  }
+
+  #activities p, #activities h3 {
+    color: black;
+  }
+
+  #youtube {
+    background-color: black;
+  }
+
+  #youtube p, #youtube h3, #youtube h4 {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-image: url("../images/lightblue.avif");
+  }
+
+  #main-navbar ul li a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  #youtube iframe {
+    border-radius: 10px;
+  }
+
+  .fun-facts-page h1:hover {
+    color: yellow;
+  }
+
+}

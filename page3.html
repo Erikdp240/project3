@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Sample Sign Up Page</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reset.css">
+    </head>
+  <body>
+    <nav id="main-navbar">
+      <ul>
+        <li><a href="index.html">Resume</a></li>
+        <li><a href="page2.html">Fun Facts</a></li>
+        <li><a href="page3.html">Sign Up</a></li>
+      </ul>
+    </nav>
+    <div class="container2">
+      <h1>Create an Account</h1>
+      <aside class="cream">
+        <img src="images/cream_resize.jpeg" alt="two containers and one squeeze bottle of cream">
+      </aside>
+      <section>
+        <div id="info">
+          <h4>Personal Information</h4>
+          <form>
+            <div id="person">
+              <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+              <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+              <input type="email" id="email" name="email" placeholder="Email Address" required>
+              <input type="text" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <p><strong>Age</strong></p>
+            <input type="radio" id="age1" name="age" value="30">
+            <label for="age1">0-30</label>
+            <br>
+            <input type="radio" id="age2" name="age" value="60">
+            <label for="age2">31 - 60</label>
+            <br>
+            <input type="radio" id="age3" name="age" value="100">
+            <label for="age3">61 and older</label>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div id="textbox">
+          <h4>Final Information</h4>
+          <form>
+            <label for="box">Tell us how you heard about our products:</label>
+            <br>
+            <textarea id="box" name="box" rows="4" cols="50" placeholder="Enter text here..."></textarea>
+          </form>
+        </div>
+        <div id="sub">
+          <form action="index.html" method="get">
+            <input type="checkbox" id="agree" name="agree" value="yes">
+            <label for="agree"> I've read and agreed to the terms of use, privacy notice, and offer details</label>
+            <br>
+            <input type="checkbox" id="decline" name="decline" value="no">
+            <label for="decline"> Please don't send me marketing communcations</label>
+            <p><strong>Pressing submit would return you back to first page.</strong></p>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+  </html>
