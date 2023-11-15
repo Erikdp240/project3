@@ -1,36 +1,48 @@
-function initMap(){
-	alert('it works');
-	var el = document.getElementById('map');
-	var myLocation = new google.maps.LatLng(41.835117, -87.627130);
-	var mapOptions = {
-		center: myLocation,
-		zoom: 18,
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		mapTypeControlOptions: {
-			position: google.maps.ControlPosition.BOTTOM_CENTER
-		}
-	};
+function initMap() {
+  const myLatLng = { lat: 41.92183194594532, lng: -87.658470190136 };
 
-	var myMap = new google.maps.Map(el, mapOptions);
+  var mapOptions = {
+    zoom: 20,
+    center: myLatLng,
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    tilt: 45,
+    styles: [
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          { "visibility": "simplified" },
+          { "color": "#ffffff" }
+        ]
+      },      
+    ]
+  };
 
-	var marker = new google.maps.Marker({
-		position: myLocation,
-		map: myMap,
-		animation: google.maps.Animation.BOUNCE,
-		//icon: 'iit-icon.png'
-	});
+  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-	var contentString = '<h1>IIT Perlstein Hall</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate odit optio, voluptatem placeat odio dignissimos illo magnam esse asperiores voluptas at iure vero eum, nemo aperiam? Ipsam, atque nobis rem.</p>';
+  const contentString =
+    '<h1>Old Pueblo Cantina</h1>' + 
+    '<p>Classic fare of Mexico & Arizona is offered in a quaint, low-lit space with craft cocktails & beer.</p>';
 
-	var infowindow = new google.maps.InfoWindow({
-      content: contentString
-  	});
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Old Pueblo",
+  });
 
-	google.maps.event.addListener(marker, 'mouseover', function() {
-    	infowindow.open(myMap, marker);
-  	});
+  const marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Old Pueblo",
+    animation: google.maps.Animation.BOUNCE,
+    icon: "../project3/images/beer.png",
+  });
 
-
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });
 }
 
-google.maps.event.addDomListener(window, 'load', initMap);
+window.initMap = initMap;
